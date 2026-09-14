@@ -29,7 +29,7 @@ const COLUMNS = [
     links: [
       { label: 'X / Twitter', href: 'https://x.com/rebal_market', external: true },
       { label: 'Discord', href: '#' },
-      { label: 'GitHub', href: 'https://github.com/devrebal/rebal', external: true },
+      { label: 'GitHub', href: 'https://github.com/devrebal/rebal-market', external: true },
     ],
   },
 ]
