@@ -11,7 +11,7 @@ function GithubIcon({ className }: { className?: string }) {
 
 export const metadata = { title: 'GitBook — REBAL' }
 
-const GITHUB_URL = 'https://github.com/devburner113/rebal'
+const GITHUB_URL = 'https://github.com/devrebal/rebal'
 const X_URL = 'https://x.com/rebal_market'
 
 function XIcon({ className }: { className?: string }) {
