@@ -27,9 +27,9 @@ const COLUMNS = [
   {
     title: 'COMMUNITY',
     links: [
-      { label: 'X / Twitter', href: '#' },
+      { label: 'X / Twitter', href: 'https://x.com/rebal_market', external: true },
       { label: 'Discord', href: '#' },
-      { label: 'GitHub', href: '#' },
+      { label: 'GitHub', href: 'https://github.com/devburner113/rebal', external: true },
     ],
   },
 ]
@@ -59,9 +59,20 @@ export function Footer() {
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-foreground/80 transition-colors hover:text-foreground">
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-foreground/80 transition-colors hover:text-foreground"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="text-sm text-foreground/80 transition-colors hover:text-foreground">
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
