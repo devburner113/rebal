@@ -12,6 +12,15 @@ function GithubIcon({ className }: { className?: string }) {
 export const metadata = { title: 'GitBook — REBAL' }
 
 const GITHUB_URL = 'https://github.com/devburner113/rebal'
+const X_URL = 'https://x.com/rebal_market'
+
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden className={className}>
+      <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z" />
+    </svg>
+  )
+}
 
 const CHAPTERS = [
   {
@@ -58,14 +67,24 @@ export default function GitBookPage() {
             <h1 className="text-3xl font-semibold tracking-tight">REBAL GitBook</h1>
             <p className="text-sm text-muted-foreground">Protocol handbook · Robinhood Chain</p>
           </div>
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold tracking-wide transition-colors hover:border-foreground/30 hover:bg-accent"
-          >
-            <GithubIcon className="h-4 w-4" /> VIEW ON GITHUB
-          </a>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold tracking-wide transition-colors hover:border-foreground/30 hover:bg-accent"
+            >
+              <GithubIcon className="h-4 w-4" /> VIEW ON GITHUB
+            </a>
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold tracking-wide transition-colors hover:border-foreground/30 hover:bg-accent"
+            >
+              <XIcon className="h-3.5 w-3.5" /> FOLLOW ON X
+            </a>
+          </div>
         </div>
       </div>
 
